@@ -1,40 +1,17 @@
 $(document).ready( function() {
-  //testing for one key stroke
   $('.instrument').on('click', 'button', function(event) {
-    var text = $(this).html();
-    var audio = "#" + text + "Audio";
-    var v = $(audio)[0];
-    v.play();
-
-    // var audioId = text + "Audio";
-    // var audio = document.getElementbyId(audioId);
-    // audio.load();
-    // audio.play();
-
-    // var v = $('#bAudio')[0];
-    // console.log(v); // retrieve the first audio file
-    // console.log(this);
-    // v.play(); // play the file
+    var key1 = $(this).html();
+    var audio1 = "#" + key1 + "Audio";
+    var v1 = $(audio1)[0];
+    v1.load();
+    v1.play();
   });
 
   $(document).keydown(function(event) {
-    // console.log(event);
-    var key = event.key;
-    // console.log(text);
-    // if (event.key == text) {
-    // var audioId = key + "Audio";
-    // // console.log(audioId);
-    // var audio = document.getElementbyId(audioId);
-    // audio.load();
-    // audio.play();
-    // }
-    // var audio = "#" + key + "Audio";
-    // var v = $(audio)[0];
-    // v.play();
-
-    var audioId = key + "Audio";
-    var audio2 = document.getElementById(audioId);
-    audio2.load();
-    audio2.play();
+    var key2 = event.key;
+    var audio2 = "#" + key2 + "Audio";
+    var v2 = $(audio2)[0];
+    v2.load();
+    v2.play();
   });
 });
